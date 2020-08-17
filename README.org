@@ -29,12 +29,15 @@ repository to host the library as a CHICKEN extension (egg).  Thus,
 there are three files that are independent of the SRFI itself, and are
 as follows:
 
-=srfi-121.meta= : This file denotes metadata about the CHICKEN
+=srfi-121.meta= : This file denotes metadata about the CHICKEN 4
 extension, such as author, license, and dependencies (and dependencies
 for tests).
 
-=srfi-121.setup= : This file tells the CHICKEN package manager
+=srfi-121.setup= : This file tells the CHICKEN 4 package manager
 (=chicken-install=) how to build the egg.
+
+=srfi-121.egg= : This is the input file for the package manager
+(=chicken-install=) for CHICKEN 5.
 
 =srfi-121.release-info= : Describes the URL / different releases of
 the CHICKEN extension.

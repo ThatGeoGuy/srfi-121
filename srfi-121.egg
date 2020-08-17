@@ -1,0 +1,12 @@
+;; -*- Hen -*-
+
+((license "BSD")
+ (category data)
+ (test-dependencies test srfi-1 srfi-13)
+ (author "John Cowan")
+ (maintainer "Jeremy Steward")
+ (synopsis "SRFI-121: Generators")
+ (component-options
+  (csc-options "-O3" "-d0"))
+ (components
+  (extension srfi-121 (source "generators/generators.scm"))))
