@@ -1,8 +1,17 @@
-(use test)
-(use srfi-121)
-(use (only srfi-1 unfold))
-(use (only srfi-13 string-for-each))
-(use srfi-4)
+(cond-expand
+ (chicken-4
+  (use test)
+  (use srfi-121)
+  (use (only srfi-1 unfold))
+  (use (only srfi-13 string-for-each))
+  (use srfi-4))
+ (chicken-5
+  (import (chicken port))
+  (import test)
+  (import srfi-121)
+  (import (only srfi-1 unfold))
+  (import (only srfi-13 string-for-each))
+  (import srfi-4)))
 
 (test-group "generators"
   (test-group "generators/constructors"

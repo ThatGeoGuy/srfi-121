@@ -1,11 +1,17 @@
 (module srfi-121 ()
   (import scheme)
   ;; Provide necessary R7RS-small identifiers
-  (import (only chicken
-            use include case-lambda call/cc when define-values open-input-string))
-  (import (only extras read-line))
-  (require-library srfi-4)
-  (import (only srfi-4 u8vector-ref u8vector-length))
+  (cond-expand
+   (chicken-4
+    (import (only chicken
+                  use include case-lambda call/cc when define-values open-input-string))
+    (import (only extras read-line))
+    (require-library srfi-4)
+    (import (only srfi-4 u8vector-ref u8vector-length)))
+   (chicken-5
+    (import (chicken base)
+            (chicken module))
+    (import srfi-4)))
   (export generator make-iota-generator make-range-generator
           make-coroutine-generator list->generator vector->generator
           reverse-vector->generator string->generator
