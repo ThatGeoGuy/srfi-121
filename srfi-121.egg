@@ -2,6 +2,7 @@
 
 ((license "BSD")
  (category data)
+ (dependencies srfi-1 srfi-13)
  (test-dependencies test srfi-1 srfi-13)
  (author "John Cowan")
  (maintainer "Jeremy Steward")
