@@ -10,6 +10,7 @@
         "srfi-121.setup"
         "srfi-121.meta"
         "srfi-121.release-info"
+        "srfi-121.egg"
         "LICENSE"
         "README.org")
 
