@@ -1,3 +1,5 @@
+**WARNING**: SRFI 121 has been withdrawn and replaced by SRFI 158. CHICKEN 5 and 6 support SRFI 158, and so this repository is archived and we suggest using that egg instead.
+
 * SRFI 121: Generators
 
 ** by Shiro Kawai, John Cowan, and Thomas Gilray
